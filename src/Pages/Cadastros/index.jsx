@@ -2,8 +2,8 @@ import './styles.css'
 import Header from '../../Components/Header'
 import Footer from '../../Components/Footer'
 import { useState } from 'react'
-import Logo from '../../assets/WhiteLogo.png'
-import authServices from '../../Pages/services/auth.jsx'
+import Logo from '../../assets/whiteLogo.png'
+import authServices from '../services/auth.jsx'
 import { useNavigate } from 'react-router-dom'
 
 export default function Cadastros() {
