@@ -1,0 +1,210 @@
+.containerSobreNos{
+    margin-top: 10rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.boxTextSobreNos{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: poppins;
+    gap: 3rem;
+}
+
+.boxTextSobreNos h2{
+    font-size: clamp(1.2rem, 5vw, 3.5rem);
+}
+
+.boxParagrafoSobreNos{
+    display: flex;
+    gap: 2rem;
+}
+
+.boxParagrafoSobreNos p{
+    max-width: 500px;
+    text-align: left;
+}
+
+.nos{
+    color: #14a569;
+    border-bottom: 3px solid #14a569;
+}
+
+.boxElementsSobreNos{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.element1SobreNos{
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    background-color: #14a569;
+    position: absolute;
+    top: 0rem;
+    left: -10rem;
+    z-index: -1;
+}
+.element2SobreNos{
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    background-color: #14a569;
+    position: absolute;
+    top: 10rem;
+    right: -10rem;
+    z-index: -1;
+}
+
+@media (max-width: 1435px){
+    .elementChuteirasHome{
+        width: 800px;
+        height: 800px;
+    }
+
+    .chuteirasHomeBanner{
+        width: 700px;
+        top: 6rem;
+        right: -6rem;
+    }
+
+    .boxTxtChuteirasHome {
+        width: 600px;
+    }
+
+    .elementCamisasHome{
+        width: 650px;
+        height: 650px;
+    }
+
+    .camisasHomeBanner{
+        width: 450px;
+        top: 1rem;
+        left: -5rem;
+    }
+
+    .boxElementsSobreNos img{
+        border-radius: 50%;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
+        width: 200px;
+    }
+
+}
+
+@media (max-width: 1080px){
+    .boxTxtChuteirasHome {
+        width: 60%;
+    }
+
+    .boxTxtCamisasHome{
+        width: 60%;
+    }
+
+    .boxLigaItem img{
+        width: 130px;
+    }
+
+    .chuteirasHomeBanner{
+        width: 500px;
+    }
+
+    .elementChuteirasHome{
+        width: 600px;
+        height: 600px;
+    }
+
+    .camisasHomeBanner{
+        width: 500px;
+    }
+
+    .elementCamisasHome{
+        width: 600px;
+        height: 600px;
+    }
+
+    .camisasHomeBanner{
+        top: -5rem;
+    }
+}
+
+@media (max-width: 750px){
+    .chuteirasHomeBanner{
+        width: 400px;
+        top: -12rem;
+    }
+
+    .boxParagrafoSobreNos{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .elementChuteirasHome{
+        width: 100px;
+        height: 100px;
+    }
+
+    .elementCamisasHome{
+        width: 500px;
+        height: 500px;
+        top: -20rem;
+    }
+
+    .camisasHomeBanner{
+        top: -17rem;
+    }
+
+    .boxTxtChuteirasHome{
+        width: 100%;
+    }
+
+    .boxTxtCamisasHome{
+        width: 100%;
+    }
+
+    .boxMarcaItem img{
+        width: 130px;
+    }
+
+    .boxMarcasHome{
+        display: flex;
+    }
+
+    .boxTextSobreNos{
+        padding: 1rem;
+    }
+
+    .boxTextSobreNos h2{
+        font-size: 30pt;
+    }
+
+    .element1SobreNos{
+        top: 5rem;
+    }
+}
+
+@media (max-width: 500px){
+    .boxTxtChuteirasHome{
+        padding: 0.5rem;
+    }
+
+    .boxMarcaItem img{
+        width: 90px;
+    }
+
+    .chuteirasHomeBanner{
+        width: 400px;
+        top: -15rem;
+    }
+
+    .boxTxtCamisasHome{
+        padding: 0.5rem;
+    }
+
+    .boxLigaItem img{
+        width: 100px;
+    }
+}

@@ -1,0 +1,108 @@
+.containerCarrossel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    margin-top: 5rem;
+}
+
+.containerMotion{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carrosselLancamentos{
+    overflow: hidden;
+    cursor: grabbing;
+    padding: 2rem 1rem;
+}
+
+.containerCarrossel h1{
+    margin-bottom: 4rem;
+    font-family: poppins;
+    color: #14a569;
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    border-bottom: 4px solid #68c8a0;
+    border-radius: 1px;
+}
+
+.innerLancamentos{
+    display: flex;
+    gap: 2rem;
+    width: fit-content;
+}
+
+.cardLancamentos{
+    position: relative;
+    background: radial-gradient(circle farthest-corner at center center, #68c8a0 0%, #22270c 80%);
+    width: 300px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    border-radius: 33px;
+    box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+    cursor: pointer;
+}
+
+.cardLancamentosTop img{
+    width: 100%;
+    background-color: aliceblue;
+    border-top-left-radius: 33px;
+    border-top-right-radius: 33px;
+    transition: all 0.3s ease-in-out;
+}
+
+.cardLancamentos:hover .cardLancamentosTop img{
+    transform: scale(0.96);
+    border-bottom-left-radius: 33px;
+    border-bottom-right-radius: 33px;
+}
+
+.contentCardLancamentos{
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    font-family: poppins;
+}
+
+.contentCardLancamentos h2{
+    font-size: 11pt;
+}
+
+.contentCardLancamentos h3{
+    width: fit-content;
+    background-color: #14a569;
+    padding: 0.3vw;
+    border-radius: 30px;
+    font-size: 10pt;
+}
+
+@media (max-width: 704px) {
+    .cardLancamentos{
+        width: 200px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 470px) {
+    .cardLancamentos{
+        width: 170px;
+        height: 320px;
+    }
+}
+
+@media (max-width: 405px) {
+    .cardLancamentos{
+        width: 150px;
+        height: 310px;
+    }
+}

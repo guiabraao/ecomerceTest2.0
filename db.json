@@ -1,0 +1,134 @@
+{
+    "camisas": [
+        {
+            "id": 1,
+            "nome": "Tottenham 25/26 - Titular",
+            "preco": "349,99",
+            "produto": "Camisa",
+            "filtro": "Premiere League",
+            "imagem": "https://pedidoatacado.com/wp-content/uploads/2025/10/Imagem-do-WhatsApp-de-2025-10-03-as-09.46.07_a099fe15-e1759498109527.jpg"
+        },
+        {
+            "id": 2,
+            "nome": "Real Madrid 25/26 - Titular",
+            "preco": "349,99",
+            "produto": "Camisa",
+            "filtro": "La Liga",
+            "imagem": "https://pedidoatacado.com/wp-content/uploads/2025/02/1a010c4a-800x800-1.jpg"
+        },
+        {
+            "id": 3,
+            "nome": "Liverpool 25/26 - Manga Longa",
+            "preco": "349,99",
+            "produto": "Camisa",
+            "filtro": "Premiere League",
+            "imagem": "https://pedidoatacado.com/wp-content/uploads/2025/08/Liverpool-Titular-25-26-Manga-Longa-800x800-1.jpg"
+        },
+        {
+            "id": 4,
+            "nome": "Chelsea 25/26 - Titular",
+            "preco": "349,99",
+            "produto": "Camisa",
+            "filtro": "Premiere League",
+            "imagem": "https://pedidoatacado.com/wp-content/uploads/2025/06/45843445-800x800-1.jpg"
+        },
+        {
+            "id": 5,
+            "nome": "Galo 25/26 - Reserva",
+            "preco": "349,99",
+            "produto": "Camisa",
+            "filtro": "Brasilleirão",
+            "imagem": "https://pedidoatacado.com/wp-content/uploads/2025/06/5b047031-800x800-1.jpg"
+        },
+        {
+            "id": 6,
+            "nome": "Vasco 25/26 - Titular",
+            "preco": "349,99",
+            "produto": "Camisa",
+            "filtro": "Brasilleirão",
+            "imagem": "https://pedidoatacado.com/wp-content/uploads/2025/08/52e083bc-scaled-e1755181972901.jpeg"
+        },
+        {
+            "id": 7,
+            "nome": "Barcelona 25/26 - Titular",
+            "preco": "349,99",
+            "produto": "Camisa",
+            "filtro": "La Liga",
+            "imagem": "https://pedidoatacado.com/wp-content/uploads/2025/04/1336aa97-800x800-1.jpeg"
+        },
+        {
+            "id": 8,
+            "nome": "Manchester United 25/26 - Titular",
+            "preco": "349,99",
+            "produto": "Camisa",
+            "filtro": "Premiere League",
+            "imagem": "https://pedidoatacado.com/wp-content/uploads/2025/08/IMG_0356.JPEG-800x800-1.jpg"
+        }
+    ],
+    "chuteiras": [
+        {
+            "id": 1,
+            "nome": "Nike Mercurial 16",
+            "preco": "699,90",
+            "produto": "Chuteira",
+            "filtro": "Nike",
+            "imagem": "https://imgnike-a.akamaihd.net/360x360/059553P1A1.jpg"
+        },
+        {
+            "id": 2,
+            "nome": "Nike Phantom GX II",
+            "preco": "590,90",
+            "produto": "Chuteira",
+            "filtro": "Nike",
+            "imagem": "https://imgnike-a.akamaihd.net/360x360/0291727TA9.jpg"
+        },
+        {
+            "id": 3,
+            "nome": "Nike Tiempo 10",
+            "preco": "899,90",
+            "produto": "Chuteira",
+            "filtro": "Nike",
+            "imagem": "https://imgnike-a.akamaihd.net/360x360/02729116A1.jpg"
+        },
+        {
+            "id": 4,
+            "nome": "Nike Mercurial 16",
+            "preco": "999,90",
+            "produto": "Chuteira",
+            "filtro": "Nike",
+            "imagem": "https://imgnike-a.akamaihd.net/360x360/029427NXA1.jpg"
+        },
+        {
+            "id": 5,
+            "nome": "Chuteira F50",
+            "preco": "899,90",
+            "produto": "Chuteira",
+            "filtro": "Adidas",
+            "imagem": "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/583ed18a2b484ee38222e5d4ca85fc55_9366/Chuteira_Sem_Cadarcos_F50_Elite_Campo_Roxo_JH7628_HM1.jpg"
+        },
+        {
+            "id": 6,
+            "nome": "Chuteira F50",
+            "preco": "899,90",
+            "produto": "Chuteira",
+            "filtro": "Adidas",
+            "imagem": "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/1eb82bc423a3494fb622aa9791fdeed3_9366/Chuteira_F50_Elite_Firm_Ground_Laranja_JH7618_HM1.jpg"
+        },
+        {
+            "id": 7,
+            "nome": "PREDATOR Tongue BWR",
+            "preco": "699,90",
+            "produto": "Chuteira",
+            "filtro": "Adidas",
+            "imagem": "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/a7110c3712a84f9eaa99fe29665b0ebb_9366/Chuteiras_Predator_Elite_Lingua_Dobravel_chuteira_de_campo_BWR_Preto_JH9258_HM1.jpg"
+        },
+        {
+            "id": 8,
+            "nome": "PREDATOR Tongue Beckham",
+            "preco": "699,90",
+            "produto": "Chuteira",
+            "filtro": "Adidas",
+            "imagem": "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/d3bf2eb5f21544a881638940052b0c51_9366/Chuteira_PREDATOR_ELITE_Fold-Over_Tongue_Firm_Ground_Football_Beckham_Rosa_JI1094_HM1.jpg"
+        }
+    ]
+}

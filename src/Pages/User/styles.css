@@ -1,0 +1,112 @@
+.containerUsuario{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    font-family: poppins;
+    padding-top: 100px;
+}
+
+.boxUser{
+    width: 60%;
+}
+
+.userContent{
+    display: flex;
+    gap: 3rem;
+}
+
+.boxUserTop{
+    display: flex;
+    flex-direction: column;
+    align-items: safe;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    border: 1px solid black;
+    padding: 1rem;
+    width: fit-content;
+}
+
+.boxtop{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.boxtop h2{
+    font-size: 12pt;
+}
+
+.boxSair p{
+    font-size: 9pt;
+    margin-top: 0.3rem;
+}
+
+.boxUserTop img{
+    width: 30px;
+}
+
+.boxSair{
+    display: flex;
+    justify-content: center;
+    gap: 0.2rem;
+    color: #ff0000;
+    cursor: pointer;
+}
+
+.boxSair img{
+    width: 20px;
+}
+
+.boxPedidos{
+    margin-top: 3rem;
+    display: flex;
+    gap: 1rem;
+    align-items: end;
+    padding: 1rem;
+    border-radius: 12px;
+    border: 1px solid black;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+.boxPedidos img{
+    width: 30px;
+}
+
+.boxPedidos p{
+    position: relative;
+    cursor: pointer;
+    font-size: 10pt;
+}
+
+.boxPedidos p span::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: width 0.3s ease;
+}
+
+.boxPedidos p span:hover::after{
+    width: 100%;
+}
+
+.contentUser{
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    padding: 1rem;
+}
+
+.contentUser h2{
+    color: #0e950e;
+    border-bottom: 3px solid #0e950e;
+    width: fit-content;
+}
+
+@media (max-width: 1050px) {
+     .userContent{
+        flex-direction: column;
+     }
+}

@@ -1,0 +1,134 @@
+.containerCarrinho{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    font-family: poppins;
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    right: 0;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.carrinhoBox{
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.carrinhoTop{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);;
+}
+
+.carrinhoLeftTop{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.carrinhoRightTop{
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    color: rgb(255, 0, 0);
+    border-radius: 10px;
+    transition: border ease-in-out ;
+    padding: 0.2rem;
+}
+
+.carrinhoRightTop:hover{
+    border: 1.6px solid red;
+    cursor: pointer;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+.carrinhoLeftTop img{
+    width: 40px;
+}
+
+.carrinhoRightTop img{
+    width: 30px;
+}
+
+.itemStart img{
+    width: 150px;
+}
+
+.carrinhoContent{
+    padding: 1rem;
+    height: 100%;
+}
+
+.carrinhoItem{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 22px;
+    padding: 0.8rem;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    background-color: rgb(240, 255, 249);
+}
+
+.itemStart{
+    display: flex;
+    align-items: center;
+}
+
+.itemDetails h2{
+    color: #14a569;
+}
+
+.itemDetailsBottom{
+    display: flex;
+    gap: 2rem;
+}
+
+.itemQuant h3{
+    font-size: 10pt;
+    font-weight: 400;
+    color: rgb(255, 0, 0);
+}
+
+.itemPrice h2{
+    color: #14a569;
+}
+
+.carrinhoBottom{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #14a569;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.carrinhoBottom button{
+    height: fit-content;
+    padding: 1rem;
+    border-radius: 33px;
+    width: 200px;
+    border: none;
+    color: #14a569;
+    font-family: poppins;
+    font-weight: 800;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.carrinhoBottom button:hover{
+    transform: scale(0.95);
+}
+

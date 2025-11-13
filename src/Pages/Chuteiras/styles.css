@@ -1,0 +1,304 @@
+.mainChuteirasPage {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.containerChuteirasPage {
+    padding: 2vw;
+    display: flex;
+    width: 90%;
+}
+
+.boxFilterChuteiras {
+    box-shadow: 0px 0px 5px rgb(0, 0, 0, 0.5);
+    border-radius: 100px;
+    width: 120px;
+    height: 700px;
+    padding: 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    font-family: poppins;
+}
+
+.logoBoxFilter img {
+    width: 80px;
+    box-shadow: 0px 0px 5px rgb(0, 0, 0, 0.3);
+    border-radius: 50%;
+}
+
+.filterBrand img {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(90deg, #0e950e 0%, #12c812 80%);
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.filterBrand img:hover {
+    transform: scale(1.07);
+}
+
+.boxFilterChuteiras ul li {
+    list-style: none;
+}
+
+.boxFilterChuteiras ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.boxFilterChuteiras h2 {
+    font-size: 12pt;
+    text-align: left;
+    width: 100%;
+    color: #0e950e;
+}
+
+.boxBrand {
+    margin-top: 4vh;
+}
+
+.filterBrand {
+    margin-top: 4vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.boxSizesChuteirasPage {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.filterSize {
+    margin-top: 4vh;
+}
+
+.filterSize li {
+    display: flex;
+    justify-content: center;
+    width: 35px;
+}
+
+.boxSizesChuteirasPage ul li span {
+    font-size: 14pt;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.boxSizesChuteirasPage ul li span::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #0e950e;
+    transition: width 0.3s ease;
+}
+
+.boxSizesChuteirasPage ul li span:hover {
+    color: #0e950e;
+    transform: scale(1.2);
+}
+
+.boxSizesChuteirasPage ul li span:hover::after {
+    width: 100%;
+}
+
+.containerProdutos {
+    width: 100%;
+    padding: 1vw;
+}
+
+.boxTopProdutos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #0e950e;
+}
+
+.boxTopProdutos h1 {
+    font-family: poppins;
+    color: #0e950e;
+}
+
+.boxTopProdutos select {
+    padding: 0.2vw;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0px 0px 8px rgb(0, 0, 0, 0.4);
+}
+
+.boxTopProdutos select option:hover {
+    color: white;
+    background-color: #0e950e;
+}
+
+@media (max-width: 1345px) {
+    .containerChuteirasPage {
+        width: 100%;
+    }
+}
+
+
+.boxIconFilterMobile img {
+    width: 40px;
+}
+
+.boxFilterMobile {
+    position: absolute;
+    z-index: 4;
+    background-color: #14a569;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+    width: 100%;
+    top: 2.4rem;
+    right: 0;
+    padding: 1rem;
+    font-family: poppins;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.filterMobileTop {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filterMobileTop h4 {
+    color: white;
+    font-size: 18pt;
+}
+
+.boxCloseFilter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid red;
+    border-radius: 33px;
+    padding: 0.3rem;
+    color: red;
+    font-size: 10pt;
+    cursor: pointer;
+}
+
+.boxCloseFilter img {
+    width: 20px;
+}
+
+.filterBrandMobile img {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(90deg, #0e950e 0%, #12c812 80%);
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.filterBrandMobile img:hover {
+    transform: scale(1.07);
+}
+
+.boxFilterMobile ul li {
+    list-style: none;
+}
+
+.boxFilterMobile ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.boxFilterChuteirasMobile h2 {
+    font-size: 12pt;
+    text-align: left;
+    width: 100%;
+    color: #0e950e;
+}
+
+.boxBrandMobile {
+    margin-top: 4vh;
+}
+
+.filterBrandMobile {
+    margin-top: 4vh;
+    display: flex;
+    gap: 1rem;
+}
+
+.boxSizesChuteirasPageMobile {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.filterSize {
+    margin-top: 4vh;
+}
+
+.filterSize li {
+    display: flex;
+    justify-content: center;
+    width: 35px;
+}
+
+.boxSizesChuteirasPageMobile ul li span {
+    font-size: 14pt;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.boxSizesChuteirasPageMobile ul li span::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s ease;
+}
+
+.boxSizesChuteirasPageMobile ul li span:hover {
+    color: white;
+    transform: scale(1.2);
+}
+
+.boxSizesChuteirasPageMobile ul li span:hover::after {
+    width: 100%;
+}
+
+.boxIconFilterMobile{
+    display: none;
+}
+
+@media (max-width: 850px) {
+    .boxFilterChuteiras {
+        display: none;
+    }
+
+    .boxIconFilterMobile {
+        font-size: 12pt;
+        font-family: poppins;
+        background: linear-gradient(90deg, #14a569 0%, #1e745e 80%);
+        padding: 0.4rem;
+        border-radius: 22px;
+        color: white;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+}

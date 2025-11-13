@@ -1,0 +1,136 @@
+.containerCadastros{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    font-family: poppins;
+}
+
+.boxCadastros{
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    height: 500px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.6s ease-in-out;
+    border-radius: 30px;
+}
+
+.boxCadastros.active{
+    flex-direction: row-reverse;
+}
+
+.form-box, .sideLogin{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.6s ease-in-out;
+    padding: 2rem;
+}
+
+.form-box{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.form-box form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.form-box form h2{
+    color: #14a569;
+    border-bottom: 3px solid #14a569;
+    width: fit-content;
+}
+
+.form-box form input{
+    padding: 8px;
+    border-radius: 12px;
+    border: 2px solid #14a569;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.form-box form button{
+    cursor: pointer;
+    padding: 10px;
+    width: 200px;
+    border-radius: 20px;
+    font-weight: 700;
+    color: white;
+    border: none;
+    background-color: #14a569;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+.form-box form button:hover{
+    transform: scale(1.05);
+}
+
+.sideLogin{
+    background: linear-gradient(90deg,#14a569 0%, #1e745e 80%);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    color: white;
+    padding: 0;
+    text-align: center;
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+.side-box h3{
+    font-size: clamp(2rem, 2.5vw, 3rem);
+}
+
+.side-box button{
+    margin-top: 2rem;
+    padding: 10px;
+    font-size: 12pt;
+    width: 100%;
+    border-radius: 33px;
+    color: #14a569;
+    border: none;
+    font-weight: 800;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.side-box button:hover{
+    transform: scale(1.05);
+}
+
+.side-box img{
+    width: 200px;
+}
+
+.boxCadastros.active .form-box{
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.boxCadastros.active .sideLogin{
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+.boxCadastros.active .form-box:nth-child(1) {
+  animation: fadeIn 0.6s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
