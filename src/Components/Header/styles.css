@@ -372,10 +372,6 @@ header{
     header{
         display: none;
     }
-
-    main{
-        padding-top: 50px;
-    }
 }
 
 .headerMobile{

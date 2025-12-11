@@ -34,6 +34,15 @@
     position: relative;
 }
 
+.carrosselMobile{
+    display: none;
+    position: relative;
+}
+
+.carrosselMobile img{
+    width: 100%;
+}
+
 .carrosselHomeBottom{
     display: flex;
     gap: 0.2rem;
@@ -51,8 +60,8 @@
 .boxBtnsCarrossel{
     display: flex;
     align-items: center;
-   justify-content: center;
-   gap: 2rem; 
+    justify-content: center;
+    gap: 1rem; 
     width: 100%;
     position: absolute;
     bottom: 0;
@@ -61,16 +70,16 @@
 }
 
 .btnBox {
-    width: 60px;
-    height: 10px;
-    background-color: rgb(158, 158, 158);
+    width: 20px;
+    height: 20px;
+    background-color: rgb(202, 202, 202);
     border-radius: 15px;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
 }
 
 .btnBox.active{
-    background-color: rgb(0, 75, 40);
+    background-color: #d1ce20;
     transform: scale(1.12);
 }
 
@@ -288,6 +297,14 @@
 }
 
 @media (max-width: 620px){
+    .carrossel{
+        display: none;
+    }
+
+    .carrosselMobile{
+        display: block;
+    }
+
     .bannerBox img{
         width: 400px;
     }
@@ -298,6 +315,18 @@
     }
 
     .bannerContent button{
-        width: 110px;
+        width: 100px;
+        padding: 0.3rem;
+        font-size: 8pt;
+    }
+}
+
+@media (max-width: 420px){
+    .bannerBox img{
+        width: 340px;
+    }
+
+    .bannerContent{
+        top: 8rem;
     }
 }
