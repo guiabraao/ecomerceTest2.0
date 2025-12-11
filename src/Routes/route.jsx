@@ -7,6 +7,8 @@ import CamisasPage from "../Pages/Camisas";
 import Produto from "../Pages/Produto";
 import Estoque from "../Pages/Estoque";
 import User from "../Pages/User";
+import AdminRoute from "../Protected/adminRoute";
+import Admin from "../Pages/Admin";
 
 export default function AppRouter() {
 
@@ -21,6 +23,7 @@ export default function AppRouter() {
                 <Route path="/estoque" element={<Estoque />} />
                 <Route path='/cadastros' element={<Cadastros />} />
                 <Route path='/user' element={<User />}/>
+                <Route path='/admin' element={<AdminRoute> <Admin /> </AdminRoute>}/>
             </Routes>
         </>
     )

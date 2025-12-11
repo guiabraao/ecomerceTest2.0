@@ -65,7 +65,7 @@
     padding: 2rem;
     position: absolute;
     top: 10rem;
-    right: 3rem;
+    right: 0;
     z-index: 10;
     background-color: white;
 }
@@ -78,6 +78,7 @@
     font-size: 10pt;
     color: #14a569;
     border-bottom: 3px solid #14a569;
+    position: relative;
 }
 
 .containerFormTop img{
@@ -137,4 +138,26 @@
 
 .boxFormCamisas form select{
     width: 300px;
+}
+
+.boxClose{
+    position: absolute;
+    top: -4rem;
+    left: -3.5rem;
+    background-color: #14a569;
+    padding: 1rem;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.boxClose:hover{
+    background-color: #12945e;
+}
+
+.boxClose img{
+    width: 30px;
 }

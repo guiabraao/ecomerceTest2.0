@@ -8,15 +8,6 @@ import { useContext, useState, useEffect } from 'react'
 
 export default function User() {
 
-    // const authData = JSON.parse(localStorage.getItem('auth'))
-    // const navigate = useNavigate()
-
-    // useEffect(() => {
-    //     if (!authData) {
-    //         return navigate('/auth')
-    //     }
-    // }, [])
-
     return (
         <>
             <Header />

@@ -3,7 +3,7 @@ import { useState } from "react";
 export default function authServices() {
 
     const [authLoading, setAuthLoading] = useState(false)
-    const API_URL = 'http://localhost:5000/auth'
+    const API_URL = 'https://ecomercebacktest.onrender.com/auth'
 
     async function login(formData) {
         try {
@@ -32,7 +32,7 @@ export default function authServices() {
         }
     }
 
-    async function signup(formData) {
+    async function singup(formData) {
         try {
             const response = await fetch(`${API_URL}/singup`, {
                 method: 'POST',
@@ -59,5 +59,5 @@ export default function authServices() {
         console.log('Usuário deslogado.')
     }
 
-    return { login, signup, logout }
+    return { login, singup, logout }
 }

@@ -4,14 +4,27 @@ import { motion, useAnimation, AnimatePresence } from 'framer-motion'
 import Header from '../../Components/Header'
 import Footer from '../../Components/Footer'
 import CarrosselLancamentos from '../../Components/CarrosselLancamentos'
-import Carrossel1 from '../../assets/1.jpg'
-import Carrossel2 from '../../assets/2.jpg'
-import Carrossel3 from '../../assets/3.jpg'
+import Carrossel1 from '../../assets/1.png'
+import Carrossel2 from '../../assets/2.png'
+import Carrossel3 from '../../assets/3.png'
 import Banner1 from '../../assets/bannerChuteiras.png'
 import Banner2 from '../../assets/bannerCamisas.png'
+import Test from '../../assets/test.png'
+import ArrowRight from '../../assets/arrowright.svg'
+import ArrowLeft from '../../assets/arrowleft.svg'
 import { Link } from 'react-router-dom'
+import AOS from 'aos'
+import 'aos/dist/aos.css';
+
 
 export default function Home() {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 2000,
+            once: false
+        });
+    }, []);
 
     const bannerCarrossel = [
         { id: 1, image: Carrossel1 },
@@ -49,6 +62,14 @@ export default function Home() {
         }),
     };
 
+    const goToSlide = (index) => {
+        if (index === currentCarrossel) return;
+
+        const newDirection = index > currentCarrossel ? 1 : -1;
+
+        setDirection(newDirection);
+        setCurrentCarrossel(index);
+    };
 
     return (
         <>
@@ -82,17 +103,29 @@ export default function Home() {
                                     }}
                                 />
                             </AnimatePresence>
+                            <div className="boxBtnsCarrossel">
+                                <div className="boxBtnsCarrossel">
+                                    {bannerCarrossel.map((_, index) => (
+                                        <div
+                                            key={index}
+                                            className={`btnBox ${index === currentCarrossel ? "active" : ""}`}
+                                            onClick={() => goToSlide(index)}
+                                        ></div>
+                                    ))}
+                                </div>
+
+                            </div>
                         </div>
 
                         <div className="boxIntroHome">
-                            <div className="boxBannerIntro">
+                            <div className="boxBannerIntro"  data-aos="zoom-in-down">
                                 <div className="bannerBox">
                                     <img src={Banner1} alt="" />
                                     <div className="bannerContent">
                                         <Link to='/chuteiras' className='link'><button>CONFIRA</button></Link>
                                     </div>
                                 </div>
-                                <div className="bannerBox">
+                                <div className="bannerBox"  data-aos="zoom-in-down">
                                     <img src={Banner2} alt="" />
                                     <div className="bannerContent">
                                         <Link to='/camisas' className='link'><button>SHOP NOW</button></Link>

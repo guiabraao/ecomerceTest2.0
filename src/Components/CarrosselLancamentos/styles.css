@@ -39,30 +39,28 @@
 
 .cardLancamentos{
     position: relative;
-    background: radial-gradient(circle farthest-corner at center center, #68c8a0 0%, #22270c 80%);
-    width: 300px;
-    height: 450px;
+    width: 350px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     color: white;
-    border-radius: 33px;
-    box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.75);
     cursor: pointer;
+    overflow: hidden;
 }
 
 .cardLancamentosTop img{
     width: 100%;
-    background-color: aliceblue;
-    border-top-left-radius: 33px;
-    border-top-right-radius: 33px;
+    height: 100%;
     transition: all 0.3s ease-in-out;
 }
 
 .cardLancamentos:hover .cardLancamentosTop img{
-    transform: scale(0.96);
-    border-bottom-left-radius: 33px;
-    border-bottom-right-radius: 33px;
+    transform: scale(1.16);
+}
+
+.cardLancamentos:hover .contentCardLancamentos{
+    opacity: 1;
+    background: linear-gradient(180deg,#000000 0%, rgba(255,255,255,0) 80%);
+
 }
 
 .contentCardLancamentos{
@@ -72,10 +70,18 @@
     flex-direction: column;
     gap: 0.8rem;
     font-family: poppins;
+    position: absolute;
+    height: 100%;
+    opacity: 0;;
 }
 
 .contentCardLancamentos h2{
-    font-size: 11pt;
+    font-size: 15pt;
+}
+
+.contentCardLancamentos p{
+    font-weight: 800;
+    font-size: 13pt;
 }
 
 .contentCardLancamentos h3{
@@ -88,21 +94,28 @@
 
 @media (max-width: 704px) {
     .cardLancamentos{
-        width: 200px;
-        height: 350px;
+        width: 260px;
+        height: 260px;
     }
 }
 
-@media (max-width: 470px) {
+@media (max-width: 600px) {
     .cardLancamentos{
-        width: 170px;
-        height: 320px;
+        width:210px;
+        height: 210px;
     }
 }
 
-@media (max-width: 405px) {
+@media (max-width: 490px) {
+    .cardLancamentos{
+        width: 180px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 425px) {
     .cardLancamentos{
         width: 150px;
-        height: 310px;
+        height: 150px;
     }
 }

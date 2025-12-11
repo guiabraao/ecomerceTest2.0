@@ -3,7 +3,7 @@ import Header from '../../Components/Header'
 import WhiteBox from '../../assets/whiteBox.svg'
 import Chuteira from '../../assets/chuteira.svg'
 import WhiteProfile from '../../assets/whiteProfile.svg'
-import Close from '../../assets/close.svg'
+import Close from '../../assets/closeW.svg'
 import Camisa from '../../assets/camisa.svg'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
@@ -38,7 +38,7 @@ export default function Admin() {
         e.preventDefault()
 
         try {
-            const response = await fetch("http://localhost:5000/camisa", {
+            const response = await fetch("https://ecomercebacktest.onrender.com/camisa", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -88,7 +88,7 @@ export default function Admin() {
         e.preventDefault()
 
         try {
-            const response = await fetch("http://localhost:5000/chuteira", {
+            const response = await fetch("https://ecomercebacktest.onrender.com/chuteira", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -141,7 +141,7 @@ export default function Admin() {
                         <Link to='/estoque' className='link'>
                             <div className="adminItem">
                                 <img src={WhiteBox} alt="" />
-                                <p>Gerenciar Pedidos</p>
+                                <p>Gerenciar Produtos</p>
                             </div>
                         </Link>
                         <div className="adminItem" onClick={toggleNavCamisa}>
@@ -158,7 +158,7 @@ export default function Admin() {
                     <div className="containerFormCamisas">
                         <div className="containerFormTop">
                             <h2>Adicionar Camisa</h2>
-                            <img src={Close} alt="" onClick={toggleNavCamisa} />
+                            <div className="boxClose" onClick={toggleNavCamisa}><img src={Close} alt="" /></div>
                         </div>
                         <div className="boxFormCamisas">
                             <form onSubmit={handleSubmitCamisa}>
@@ -229,9 +229,9 @@ export default function Admin() {
 
                 {chuteiraExpanded && (
                     <div className="containerFormCamisas">
+                        <div className="boxClose" onClick={toggleNavChuteira}><img src={Close} alt="" /></div>
                         <div className="containerFormTop">
                             <h2>Adicionar Chuteira</h2>
-                            <img src={Close} alt="" onClick={toggleNavChuteira} />
                         </div>
                         <div className="boxFormCamisas">
                             <form onSubmit={handleSubmitChuteira}>

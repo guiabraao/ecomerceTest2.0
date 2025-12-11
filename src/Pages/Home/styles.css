@@ -30,6 +30,10 @@
     width: fit-content;
 }
 
+.carrossel{
+    position: relative;
+}
+
 .carrosselHomeBottom{
     display: flex;
     gap: 0.2rem;
@@ -42,6 +46,32 @@
 
 .carrosselHomeTop img{
     max-width: 703px;
+}
+
+.boxBtnsCarrossel{
+    display: flex;
+    align-items: center;
+   justify-content: center;
+   gap: 2rem; 
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    padding: 1rem;
+}
+
+.btnBox {
+    width: 60px;
+    height: 10px;
+    background-color: rgb(158, 158, 158);
+    border-radius: 15px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.btnBox.active{
+    background-color: rgb(0, 75, 40);
+    transform: scale(1.12);
 }
 
 .boxTxtIntroHome{

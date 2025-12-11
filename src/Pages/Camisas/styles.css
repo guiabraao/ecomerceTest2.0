@@ -7,7 +7,7 @@
 .containerCamisasPage {
     padding: 2vw;
     display: flex;
-    width: 90%;
+    width: 95%;
 }
 
 .boxFilterCamisas {
@@ -153,7 +153,7 @@
     justify-content: start;
     flex-wrap: wrap;
     gap: 1rem 2rem;
-    padding: 1rem 1vw;
+    padding: 1rem;
 }
 
 @media (max-width: 1345px) {
@@ -276,5 +276,12 @@
 @media (max-width: 850px) {
     .boxFilterCamisas {
         display: none;
+    }
+
+    .produtosList{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
     }
 }

@@ -7,16 +7,23 @@ import { Link } from 'react-router-dom';
 export default function CarrosselLancamentos() {
 
     const [chuteiras, setChuteiras] = useState([])
+    const [camisas, setCamisas] = useState([])
 
     useEffect(() => {
-        axios.get('http://localhost:5000/chuteira')
+        axios.get('https://ecomercebacktest.onrender.com/chuteira')
             .then(response => setChuteiras(response.data.body))
             .catch(error => console.error("Erro ao buscar chuteiras", error))
     }, [])
 
+    useEffect(() => {
+        axios.get('https://ecomercebacktest.onrender.com/camisa')
+            .then(response => setCamisas(response.data.body))
+            .catch(error => console.error("Erro ao buscar camisas", error))
+    }, [])
+
     const controls = useAnimation();
     const carouselRef = useRef(null);
-    const duplicateCarrosel = [...chuteiras, ...chuteiras]
+    const duplicateCarrosel = [...chuteiras, ...camisas]
 
     useEffect(() => {
         controls.start({
@@ -56,13 +63,13 @@ export default function CarrosselLancamentos() {
                         >
                             {duplicateCarrosel.map((item, index) => (
                                 <motion.div className="carrosselItemLancamentos" key={index}>
-                                    <Link to={`/produto/chuteiras/${item.id}`} className='link'>
+                                    <Link to={`/produto/chuteiras/${item._id}`} className='link'>
                                         <div className="cardLancamentos">
                                             <div className="cardLancamentosTop">
                                                 <img src={item.imagem} alt="" />
                                             </div>
                                             <div className="contentCardLancamentos">
-                                                <h3>{item.produto}</h3>
+                                                <h3>{item.filtro}</h3>
                                                 <h2>{item.nome}</h2>
                                                 <p>R$ {item.preco}</p>
                                             </div>

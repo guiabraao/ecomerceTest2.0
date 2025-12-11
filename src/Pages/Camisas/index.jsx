@@ -8,13 +8,21 @@ import Brasileirao from '../../assets/brasileirao.png'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import AOS from 'aos'
 
 export default function CamisasPage() {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 2000,
+            once: false
+        });
+    }, []);
 
     const [camisas, setCamisas] = useState([])
 
     useEffect(() => {
-        axios.get('http://localhost:5000/camisa')
+        axios.get('https://ecomercebacktest.onrender.com/camisa')
             .then(response => setCamisas(response.data.body))
             .catch(error => console.error("Erro ao buscar camisas", error))
     }, [])
@@ -28,7 +36,7 @@ export default function CamisasPage() {
                 <div className="mainCamisasPage">
                     <div className="containerCamisasPage">
 
-                        <div className="boxFilterChuteiras">
+                        <div className="boxFilterChuteiras" data-aos="fade-down">
                             <div className="logoBoxFilter"><img src={Logo} alt="" /></div>
                             <div className="boxBrand">
                                 <h2>Marcas:</h2>
@@ -53,8 +61,8 @@ export default function CamisasPage() {
                         <div className="containerProdutos">
 
                             <div className="boxTopProdutos">
-                                <h1>Camisas</h1>
-                                <select>
+                                <h1 data-aos="flip-left">Camisas</h1>
+                                <select data-aos="zoom-in">
                                     <option value="1">Mais Vendidos</option>
                                     <option value="2">Preço: Maior ao Menor</option>
                                     <option value="3">Preço: Menor ao Maior</option>
@@ -62,17 +70,17 @@ export default function CamisasPage() {
                                 </select>
                             </div>
 
-                            <div className="produtosList">
+                            <div className="produtosList" >
                                 {camisas.map((item, id) => (
                                     <Link to={`/produto/camisas/${item._id}`} key={item._id} className='link'>
-                                        <div className="cardLancamentos" key={id}>
+                                        <div className="cardLancamentos" key={id} data-aos="fade-down">
                                             <div className="cardLancamentosTop">
                                                 <img src={item.imagem} alt="" />
                                             </div>
                                             <div className="contentCardLancamentos">
                                                 <h3>{item.filtro}</h3>
                                                 <h2>{item.nome}</h2>
-                                                <p>{item.preco}</p>
+                                                <p>R$ {item.preco},00</p>
                                             </div>
                                         </div>
                                     </Link>

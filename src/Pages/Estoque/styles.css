@@ -1,5 +1,4 @@
 .containerEstoque{
-    background-color: gray;
     min-height: 80vh;
     display: flex;
     flex-direction: column;
@@ -10,23 +9,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    flex-direction: column;
+    margin-top: 10rem;
 }
 
 .produtosTypes{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     gap: 2rem;
     background-color: #14a569;
     color: white;
-    height: 600px;
     padding: 3px;
-    width: 300px;
-    border-bottom-left-radius: 33px;
-    border-top-left-radius: 33px;
+    width: 80%;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
 .produtosTypes h2{
@@ -51,7 +49,6 @@
 
 .produtosTypes ul li:hover{
     cursor: pointer;
-    background-color: #c4fae3;
     border-radius: 22px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
@@ -59,15 +56,12 @@
 table{
     background-color: rgb(255, 255, 255);
     padding: 10px;
-    border-bottom-right-radius: 33px;
-    border-top-right-radius: 33px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
-    width: 60%;
+    width: 80%;
     color: #14a569;
     border-collapse: separate;
     border-spacing: 0 10px;
 }
-
 
 tbody{
     background-color: rgb(235, 235, 235);
@@ -75,12 +69,16 @@ tbody{
 
 tbody td{
     text-align: center;
-    max-width: 70px;
+    /* max-width: 70px; */
     vertical-align: middle;
 }
 
 tbody tr td img{
     width: 140px;
+}
+
+tbody tr {
+    position: relative;
 }
 
 .btnEditar{
@@ -108,3 +106,243 @@ tbody tr td img{
 .btnExcluir:hover, .btnEditar:hover{
     transform: scale(0.9);
 }
+
+.estoqueTypeItem{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease-in-out;
+    padding: 0.5rem;
+    border-radius: 11px;
+}
+
+.estoqueTypeItem:hover{
+    background-color: #0c7e4f;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.estoqueTypeItem img{
+    width: 35px;
+}
+
+.modalExcluir{
+    background-color: rgba(39, 37, 37, 0.9);
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxModal{
+    background-color: rgb(255, 255, 255);
+    border: 5px solid #14a569;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.modalTop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 13pt;
+    color: black;
+    font-weight: 700;
+}
+
+.modalTop img{
+    width: 40px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.modalTop img:hover{
+    transform: scale(1.15);
+}
+
+.btnsModal{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.btnsModal button{
+    width: 75px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.22);
+    cursor: pointer;
+}
+
+.btnNaoModal{
+    background-color: #0c7e4ea4;
+    color: #aff8da;
+}
+
+.modalEdit{
+    background-color: rgba(39, 37, 37, 0.9);
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxModalEdit{
+    position: relative;
+}
+
+.boxModalEdit form{
+    margin-top: 1rem;
+    background-color: #f1fff9;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: left;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.boxModalEdit form input{
+    width: 300px;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.boxModalEdit form select{
+    width: 300px;
+}
+
+.boxModalEdit form button{
+    margin-top: 1rem;
+    padding: 5px;
+    border-radius: 8px;
+    background: #14a569;
+    color: white;
+    width: 60%;
+    border: none;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.22);
+    transition: all 0.3s ease;
+}
+
+.boxModalEdit form button:hover{
+    background-color: #12945e;
+}
+
+.boxCloseEdit{
+    position: absolute;
+    top: -1rem;
+    left: -2rem;
+    background-color: #14a569;
+    padding: 1rem;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.boxCloseEdit:hover{
+    background-color: #12945e;
+}
+
+.boxCloseEdit img{
+    width: 30px;
+}
+
+@media(max-width: 1000px){
+    .produtosTypes{
+        width: 95%; 
+    }
+
+    table{
+        width: 95%;
+    }
+}
+
+@media(max-width: 840px){
+    .produtosTypesMobile{
+        display: flex;
+    }
+
+    tr{
+        display: flex;
+        background-color: red;
+        flex-direction: column;
+    }
+}
+
+/* .itemMobile{
+    display: none;
+} */
+
+
+/* @media(max-width: 840px){
+    .produtosTypes{
+        display: none;
+    }
+
+    .produtosTypesMobile{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 2rem;
+        background-color: #0c7e4f;
+        width: 95%;
+        color: white;
+    }
+
+    .produtosTypesMobile img{
+        width: 20%;
+    }
+
+    .boxAnimationIcon img{
+        width: 30px;
+    }
+
+    .itemPadrao{
+        display: none;
+    }
+
+    .itemMobile{
+        display: flex;
+        flex-direction: column;
+        
+        background-color: red;
+    }
+
+    .itemMobileTop{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .itemMobileTopRight{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .itemMobileBottom{
+        display: flex;
+        justify-content: space-around;
+    }    
+} */

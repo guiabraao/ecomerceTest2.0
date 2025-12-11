@@ -12,13 +12,15 @@ export default function Cadastros() {
 
     const [loginData, setLoginData] = useState({
         emailLogIn: '',
-        passwordLogIn: ''
+        passwordLogIn: '',
+        role: 'user'
     })
 
     const [cadastroData, setCadastroData] = useState({
         nameSingUp: '',
         emailSingUp: '',
-        passwordSingUp: ''
+        passwordSingUp: '',
+        role: 'user'
     })
     
     const [isCadastro, setIsCadastro] = useState(false)
@@ -110,6 +112,10 @@ export default function Cadastros() {
                                             value={cadastroData.passwordSingUp}
                                             onChange={handleCadastroChange}
                                         />
+                                        <select name='role' value={cadastroData.role} onChange={handleCadastroChange}>
+                                            <option value="user">User</option>
+                                            <option value="admin">Admin</option>
+                                        </select>
                                         <button type='submit'>Criar conta</button>
                                     </form>
                                 </>
@@ -133,6 +139,10 @@ export default function Cadastros() {
                                             value={loginData.passwordLogIn}
                                             onChange={handleLoginChange}
                                         />
+                                        <select name='role' value={loginData.role} onChange={handleLoginChange}>
+                                            <option value="user">User</option>
+                                            <option value="admin">Admin</option>
+                                        </select>
                                         <button type='submit'>Entrar</button>
                                     </form>
                                 </>

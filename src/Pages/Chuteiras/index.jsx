@@ -21,7 +21,7 @@ export default function ChuteirasPage() {
     };
 
     useEffect(() => {
-        axios.get('http://localhost:5000/chuteira')
+        axios.get('https://ecomercebacktest.onrender.com/chuteira')
             .then(response => setChuteiras(response.data.body))
             .catch(error => console.error("Erro ao buscar chuteiras", error))
     }, [])
