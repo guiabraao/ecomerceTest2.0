@@ -18,8 +18,8 @@ function dispatchCarrinhoUpdate() {
 // ADICIONAR PRODUTO
 export function adicionarAoCarrinho(produto, tamanho = null, quantidade = 3) {
     const carrinho = getCarrinho();
+    const countItens = 0
 
-    // Verifica se já existe o mesmo produto + mesmo tamanho
     const itemExistente = carrinho.find(
         item => item.id === produto.id && item.tamanho === tamanho
     );
@@ -40,6 +40,7 @@ export function adicionarAoCarrinho(produto, tamanho = null, quantidade = 3) {
 
     salvarCarrinho(carrinho);
     dispatchCarrinhoUpdate();
+    countItens = countItens + 1
 }
 
 // REMOVER PRODUTO

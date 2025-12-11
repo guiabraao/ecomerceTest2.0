@@ -60,7 +60,6 @@
 .cardLancamentos:hover .contentCardLancamentos{
     opacity: 1;
     background: linear-gradient(180deg,#000000 0%, rgba(255,255,255,0) 80%);
-
 }
 
 .contentCardLancamentos{
@@ -110,6 +109,23 @@
     .cardLancamentos{
         width: 180px;
         height: 180px;
+    }
+
+    .contentCardLancamentos h2{
+        font-size: 11pt;
+    }
+
+    .contentCardLancamentos p{
+        font-size: 11pt;
+    }
+
+    .contentCardLancamentos h3{
+        padding: 0.45rem;
+    }
+
+    .cardLancamentos:hover .contentCardLancamentos{
+        opacity: 1;
+        background: linear-gradient(180deg,#000000 0%, rgba(255,255,255,0) 140%);
     }
 }
 

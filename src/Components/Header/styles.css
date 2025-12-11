@@ -77,6 +77,29 @@ header{
 
 .boxCarrinho{
     transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+.carrinhoVazio{
+    color: #afafaf;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.countCarrinho{
+    position: absolute;
+    top: 0;
+    right: -0.5rem;
+    background-color: #14a569;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .boxCarrinho:hover{
@@ -363,7 +386,7 @@ header{
 }
 
 .logoMobile{
-    width: 80px;
+    width: 100px;
 }
 
 .menuIcon{
@@ -371,7 +394,7 @@ header{
 }
 
 .containerHeaderMobile{
-    background-color: white;
+    background: linear-gradient(310deg,#14a569 0%, #1b4b37 80%);
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
     min-height: 100vh;
     position: fixed;
@@ -397,7 +420,7 @@ header{
 }
 
 .boxLogoMobile img{
-    width: 150px;
+    width: 200px;
 }
 
 .valorTotal{
@@ -446,7 +469,6 @@ header{
 .boxUserMobile{
     margin-top: 3rem;
     display: flex;
-    flex-direction: column;
     gap: 2rem;
 }
 
@@ -456,10 +478,8 @@ header{
     font-family: poppins;
     font-size: 8pt;
     color: #14a569;
-    padding: 1rem;
-    gap: 2rem;
+    gap: 0.5rem;
     border-radius: 33px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
 
 .boxUserItem img{
@@ -502,6 +522,10 @@ header{
     margin-top: 0.5rem;
 }
 
+.itemContentMobile{
+    display: none;
+}
+
 @media(max-width: 1464px){
     .itemDetails h2{
         max-width: 300px;
@@ -537,9 +561,42 @@ header{
 }
 
 @media(max-width: 600px){
-    .carrinhoItem{
+    .itemContentMobile{
         display: flex;
-        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .itemStart{
+        display: none;
+    }
+
+    .itemQuant{
+        display: none;
+    }
+
+    .itemPrice{
+        display: none;
+    }
+
+    .itemContentMobile img{
+        width: 120px;
+    }
+
+    .quanti{
+        width: fit-content;
+    }
+
+    .itemContentMobile h2{
+        color: #14a569;
+        font-size: 14pt;
+    }
+
+    .priceCart{
+        font-size: 15pt;
+    }
+
+    .quanti img{
+        width: 15px;
     }
 
     .boxRightCarrinho{

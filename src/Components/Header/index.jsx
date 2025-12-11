@@ -2,6 +2,7 @@ import './styles.css'
 import { useState, useContext, useEffect } from 'react'
 import Profile from '../../assets/profile.svg'
 import WhiteProfile from '../../assets/whiteProfile.svg'
+import WhiteLogo from '../../assets/whiteLogo.png'
 import whiteBox from '../../assets/whiteBox.svg'
 import Cart from '../../assets/cart.svg'
 import Logo from '../../assets/logo.png'
@@ -118,6 +119,9 @@ export default function Header() {
                                 <div className="btnExpandir" onClick={toggleNav}>
                                     <img src={Cart} alt="Cart" className="cartIcon" />
                                 </div>
+                                <div className="countCarrinho">
+                                    <p>1</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -143,7 +147,7 @@ export default function Header() {
                 <div className="containerHeaderMobile">
                     <div className="boxHeaderMobile">
                         <img src={Menu} alt="" className='menuIcon' onClick={toggleNavHeader} />
-                        <Link to='/'><div className="boxLogoMobile"><img src={Logo} alt="" /></div></Link>
+                        <Link to='/'><div className="boxLogoMobile"><img src={WhiteLogo} alt="" /></div></Link>
                         <nav className='navListMobile'>
                             <ul>
                                 <Link to="/chuteira" className='link'><li><span>Chuteiras</span></li></Link>
@@ -156,7 +160,7 @@ export default function Header() {
                                 <img src={Profile} alt="" />
                                 <h2>Perfil</h2>
                             </div>
-                            <div className="boxUserItem">
+                            <div className="boxUserItem" onClick={toggleNav}>
                                 <img src={Cart} alt="" />
                                 <h2>Carrinho</h2>
                             </div>
@@ -182,7 +186,12 @@ export default function Header() {
 
                         <div className="carrinhoContent">
 
-                            {itens.map(item => (
+                            {itens.length === 0 && (
+                                <p className="carrinhoVazio">Seu carrinho está vazio.</p>
+                            )}
+
+
+                            {itens.length > 0 && itens.map(item =>  (
                                 <div className="carrinhoItem" key={item.id + item.tamanho}>
                                     <div className="itemStart">
                                         <img src={item.imagem} alt="" />
@@ -205,6 +214,21 @@ export default function Header() {
 
                                     <div className="itemPrice">
                                         <h2>R$ {(item.preco * item.quantidade).toFixed(2)}</h2>
+                                    </div>
+
+                                    <div className="itemContentMobile">
+                                        <img src={item.imagem} alt="" />
+                                        <div className="itemBoxMobile">
+                                            <h2>{item.nome}</h2>
+                                            <p>Tamanho: {item.tamanho}</p>
+                                            <div className="quanti">
+                                                <img className='minus' src={Minus} onClick={() => atualizarQtd(item.id, item.tamanho, item.tipo, item.quantidade - 1)}></img>
+                                                <p>{item.quantidade}</p>
+                                                <img src={Plus} onClick={() => atualizarQtd(item.id, item.tamanho, item.tipo, item.quantidade + 1)}></img>
+                                                <h3 onClick={() => removerItem(item.id, item.tamanho, item.tipo)}>Remover</h3>
+                                            </div>
+                                            <h2 className='priceCart'>R$ {(item.preco * item.quantidade).toFixed(2)}</h2>
+                                        </div>
                                     </div>
                                 </div>
                             ))}
