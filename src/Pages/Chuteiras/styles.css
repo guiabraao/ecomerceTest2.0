@@ -8,6 +8,8 @@
     padding: 2vw;
     display: flex;
     width: 95%;
+    margin-top: 8rem;
+    position: relative;
 }
 
 .boxFilterChuteiras {
@@ -150,8 +152,37 @@
     }
 }
 
+.containerFilterMob{
+    z-index: 99;
+}
 
-.boxIconFilterMobile img {
+.filtrosMob{
+    width: 100%;
+    overflow: hidden;
+    max-height: 50px;
+    transition: max-height 0.5s ease,  width 0.5s ease;
+    background: linear-gradient(310deg,#14a569 0%, #296e51 80%);
+    border-radius: 5px;
+}
+
+.filterTopMob{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    align-items: center;
+    color: white;
+    border-radius: 10px;
+}
+
+.filterTopMob img{
+    width: 35px;
+}
+
+.filtrosMob.expanded{
+    max-height: 830px;
+}
+
+/* .boxIconFilterMobile img {
     width: 40px;
 }
 
@@ -281,7 +312,7 @@
 
 .boxIconFilterMobile{
     display: none;
-}
+} */
 
 @media (max-width: 850px) {
     .boxFilterChuteiras {

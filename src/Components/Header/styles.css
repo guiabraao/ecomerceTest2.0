@@ -375,7 +375,7 @@ header{
 }
 
 .headerMobile{
-    display: flex;
+    display: none;
     justify-content: space-between;
     padding: 1rem 2rem;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
@@ -535,6 +535,14 @@ header{
 }
 
 @media(max-width: 768px){
+    .containerHeader{
+        display: none;
+    }
+
+    .headerMobile{
+        display: flex;
+    }
+
     .itemStart img{
         width: 100px;
     }
@@ -554,24 +562,13 @@ header{
     .itemPrice{
         font-size: 8pt;
     }
+    
 }
 
 @media(max-width: 600px){
     .itemContentMobile{
         display: flex;
         gap: 2rem;
-    }
-
-    .itemStart{
-        display: none;
-    }
-
-    .itemQuant{
-        display: none;
-    }
-
-    .itemPrice{
-        display: none;
     }
 
     .itemContentMobile img{

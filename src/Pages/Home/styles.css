@@ -6,6 +6,7 @@
 }
 
 .containerHome{
+    margin-top: 5rem;
     width: 100%;
 }
 
@@ -70,8 +71,8 @@
 }
 
 .btnBox {
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     background-color: rgb(202, 202, 202);
     border-radius: 15px;
     transition: all 0.3s ease-in-out;
@@ -294,6 +295,12 @@
     background-color: #14a569;
     color: white;
     transform: scale(0.96);
+}
+
+@media(max-width: 768px){
+    .containerHome{
+        margin-top: 0;
+    }
 }
 
 @media (max-width: 620px){

@@ -24,6 +24,10 @@ export default function Produto() {
             .catch(err => console.error("Erro ao carregar produto:", err))
     }, [tipo, id]);
 
+    useEffect(() => {
+        setTamanhoSelecionado(null);
+    }, [tipo, id]);
+
     if (!produto) {
         return <p>Carregando produto...</p>;
     }
@@ -62,9 +66,8 @@ export default function Produto() {
                                     {['39', '40', '41', '42', '43', '44'].map(tamanho => (
                                         <div
                                             key={tamanho}
-                                            className={`sizeItem ${
-                                                tamanhoSelecionado === tamanho ? 'selecionado' : ''
-                                            }`}
+                                            className={`sizeItem ${tamanhoSelecionado === tamanho ? 'selecionado' : ''
+                                                }`}
                                             onClick={() => setTamanhoSelecionado(tamanho)}
                                         >
                                             <h3>{tamanho}</h3>

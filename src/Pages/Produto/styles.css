@@ -1,3 +1,7 @@
+.containerProduto{
+    margin-top: 8rem;
+}
+
 .boxProduto{
     display: flex;
 }

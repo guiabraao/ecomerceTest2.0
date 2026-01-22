@@ -60,7 +60,7 @@ export default function ChuteirasPage() {
 
                         <div className="containerProdutos">
 
-                            <div className="boxIconFilterMobile" onClick={toggleNav}>
+                            {/* <div className="boxIconFilterMobile" onClick={toggleNav}>
                                 <p>Filtros</p>
                                 <img src={Seta} alt="" />
                                 {expanded && (
@@ -93,6 +93,34 @@ export default function ChuteirasPage() {
                                         </div>
                                     </div>
                                 )}
+                            </div> */}
+
+                            <div className="containerFilterMob">
+                                <div className={`${"filtrosMob"} ${ expanded ? "expanded" : ""}`}>
+                                    <div className="filterTopMob" onClick={toggleNav}> 
+                                        <p>Filtros</p>
+                                        <img src={Seta} alt="" />
+                                    </div>
+                                    <div className="boxBrandMobile">
+                                            <h2>Marcas:</h2>
+                                            <ul className="filterBrandMobile">
+                                                <li><img src={Nike} alt="" /></li>
+                                                <li><img src={Adidas} alt="" /></li>
+                                                <li><img src={Puma} alt="" /></li>
+                                            </ul>
+                                        </div>
+                                        <div className="boxSizesChuteirasPageMobile">
+                                            <h2>Tamanhos:</h2>
+                                            <ul className="filterSize">
+                                                <li><span>39</span></li>
+                                                <li><span>40</span></li>
+                                                <li><span>41</span></li>
+                                                <li><span>42</span></li>
+                                                <li><span>43</span></li>
+                                                <li><span>44</span></li>
+                                            </ul>
+                                        </div>
+                                </div>
                             </div>
 
                             <div className="boxTopProdutos">

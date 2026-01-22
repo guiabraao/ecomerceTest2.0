@@ -200,7 +200,7 @@ export default function Estoque() {
                             </div>
                         </div>
                         <div className="produtosTypesMobile">
-                            <img src={Logo} alt="" />
+                            <div className="imgProdutosMob"><img src={Logo} alt="" /></div>
                             <h1>{estoqueData[selectedEstoque].titulo}</h1>
                             <div className="estoqueTypeMobile">
                                 <ul>
@@ -237,11 +237,13 @@ export default function Estoque() {
                                 {estoqueAtual.map((item) => (
                                     <tr key={item._id} className='itemPadrao'>
                                         <td><img src={item.imagem} alt="" /></td>
-                                        <td>{item.nome}</td>
-                                        <td>{item.filtro}</td>
-                                        <td>{item.categoria}</td>
-                                        <td>R$ {item.preco}</td>
                                         <td className='editProduct'>
+                                            <div className="contentItemPadrao">
+                                                <td>{item.nome}</td>
+                                                <td>{item.filtro}</td>
+                                                <td>{item.categoria}</td>
+                                                <td>R$ {item.preco}</td>
+                                            </div>
                                             <button className='btnEditar' onClick={() => {
                                                 setExpandedEdit(item._id);
                                                 setFormEdicao({
@@ -338,19 +340,21 @@ export default function Estoque() {
                                                 <div className="modalExcluir">
                                                     <div className="boxModal">
                                                         <div className="modalTop">
+                                                            <h2>Excluir Produto</h2>
                                                             <p>Você dejesa excluir esse produto?</p>
+                                                            <p>{item.nome}</p>
                                                             <img src={Close} alt="" onClick={toggleNav} />
                                                         </div>
                                                         <div className="modalContent">
                                                             <img src={item.imagem} alt="" />
                                                         </div>
                                                         <div className="btnsModal">
-                                                            <button className="btnExcluir" onClick={() =>
+                                                            <button className="btnExcluirModal" onClick={() =>
                                                                 selectedEstoque === "Camisas"
                                                                     ? handleDeleteCamisa(item._id)
                                                                     : handleDeleteChuteira(item._id)
-                                                            }>Sim</button>
-                                                            <button className="btnNaoModal" onClick={toggleNav}>Não</button>
+                                                            }>Excluir</button>
+                                                            <button className="btnNaoModal" onClick={toggleNav}>Cancelar</button>
                                                         </div>
                                                     </div>
                                                 </div>

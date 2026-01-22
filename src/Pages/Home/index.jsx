@@ -12,8 +12,6 @@ import CarrosselMobile2 from '../../assets/mobile2.png'
 import CarrosselMobile3 from '../../assets/mobile3.png'
 import Banner1 from '../../assets/bannerChuteiras.png'
 import Banner2 from '../../assets/bannerCamisas.png'
-import ArrowRight from '../../assets/arrowright.svg'
-import ArrowLeft from '../../assets/arrowleft.svg'
 import { Link } from 'react-router-dom'
 import AOS from 'aos'
 import 'aos/dist/aos.css';
@@ -176,13 +174,13 @@ export default function Home() {
                                 <div className="bannerBox">
                                     <img src={Banner1} alt="" />
                                     <div className="bannerContent">
-                                        <Link to='/chuteiras' className='link'><button>CONFIRA</button></Link>
+                                        <Link to='/chuteira' className='link'><button>CONFIRA</button></Link>
                                     </div>
                                 </div>
                                 <div className="bannerBox"  data-aos="zoom-in-down">
                                     <img src={Banner2} alt="" />
                                     <div className="bannerContent">
-                                        <Link to='/camisas' className='link'><button>SHOP NOW</button></Link>
+                                        <Link to='/camisa' className='link'><button>SHOP NOW</button></Link>
                                     </div>
                                 </div>
                             </div>

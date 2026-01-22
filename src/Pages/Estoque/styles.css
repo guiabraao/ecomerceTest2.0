@@ -142,7 +142,7 @@ tbody tr {
 
 .boxModal{
     background-color: rgb(255, 255, 255);
-    border: 5px solid #14a569;
+    border: 5px solid rgb(221, 3, 3);
     padding: 1rem 2rem;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
@@ -176,16 +176,32 @@ tbody tr {
 }
 
 .btnsModal button{
-    width: 75px;
+    width: 150px;
     border-radius: 8px;
+    padding: 0.5rem;
     border: none;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.22);
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
 .btnNaoModal{
-    background-color: #0c7e4ea4;
-    color: #aff8da;
+    background-color: #e7e7e7a4;
+}
+
+.btnExcluirModal{
+    background-color: rgb(238, 32, 32);
+    color: white;
+}
+
+.btnNaoModal:hover{
+    transform: scale(0.96);
+    background-color: #dbdbdb;
+}
+
+.btnExcluirModal:hover{
+    transform: scale(0.96);
+    background-color: rgb(182, 24, 24);
 }
 
 .modalEdit{
@@ -241,6 +257,7 @@ tbody tr {
     border: none;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.22);
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .boxModalEdit form button:hover{
@@ -270,6 +287,19 @@ tbody tr {
     width: 30px;
 }
 
+.produtosTypesMobile{
+    display: none;
+}
+
+.modalTop{
+    display: flex;
+    flex-direction: column;
+}
+
+.modalTop h2{
+    color: rgb(221, 3, 3);
+}
+
 @media(max-width: 1000px){
     .produtosTypes{
         width: 95%; 
@@ -285,24 +315,25 @@ tbody tr {
         display: flex;
     }
 
-    tr{
+    thead tr{
         display: flex;
-        background-color: red;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
     }
 }
 
-/* .itemMobile{
+.itemMobile{
     display: none;
-} */
+} 
 
-
-/* @media(max-width: 840px){
+ @media(max-width: 840px){
     .produtosTypes{
         display: none;
     }
 
     .produtosTypesMobile{
+        position: relative;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -310,10 +341,18 @@ tbody tr {
         background-color: #0c7e4f;
         width: 95%;
         color: white;
+        border-top-left-radius: 10px;
+        border-bottom-right-radius: 10px;
     }
 
-    .produtosTypesMobile img{
-        width: 20%;
+    .imgProdutosMob{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .imgProdutosMob img{
+        width: 60px;
     }
 
     .boxAnimationIcon img{
@@ -321,14 +360,36 @@ tbody tr {
     }
 
     .itemPadrao{
-        display: none;
+        background-color: #e4f0eb;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
     }
 
-    .itemMobile{
+    tbody{
         display: flex;
         flex-direction: column;
-        
-        background-color: red;
+        gap: 1.5rem;
+    }
+
+    .itemPadrao{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.4rem;
+    }
+
+    .editProduct{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .contentItemPadrao{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        text-align: left;
     }
 
     .itemMobileTop{
@@ -345,4 +406,10 @@ tbody tr {
         display: flex;
         justify-content: space-around;
     }    
-} */
+} 
+
+ @media(max-width: 450px){
+    .contentItemPadrao td{
+        font-size: 9pt;
+    }
+ }

@@ -229,7 +229,7 @@ export default function Admin() {
 
                 {chuteiraExpanded && (
                     <div className="containerFormCamisas">
-                        <div className="boxClose" onClick={toggleNavChuteira}><img src={Close} alt="" /></div>
+                        <div className="boxCloseChuteira" onClick={toggleNavChuteira}><img src={Close} alt="" /></div>
                         <div className="containerFormTop">
                             <h2>Adicionar Chuteira</h2>
                         </div>

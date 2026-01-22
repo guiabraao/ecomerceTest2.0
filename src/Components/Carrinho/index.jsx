@@ -22,7 +22,7 @@ export default function Carrinho() {
 
     const atualizarQtd = (id, tamanho, valor) => {
         alterarQuantidade(id, tamanho, valor);
-        setItens(getCarrinho()); // atualiza a tela
+        setItens(getCarrinho());
     };
 
     const removerItem = (id, tamanho) => {
